@@ -1,0 +1,52 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.footer {
+	background: #000;
+
+	@include e(layout) {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+	@include e(community) {
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+	}
+	@include e(channel) {
+		display: inline-block;
+		margin-right: 31px;
+		@include m(link) {
+			-webkit-transition: all .3s;
+			transition: all .3s;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+
+
+	@include e(domain) {
+		font-style: italic;
+		margin: 0 31px 0 0;
+	}
+	@include e(copyright) {
+		margin: 0;
+		@include m(ya) {
+			font-weight: 600;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+//TODO change to pseudo-selector mixin?
+.footer__channel:last-child {
+	margin: 0
+}
+.footer__channel-link:hover {
+	opacity: .8
+}
